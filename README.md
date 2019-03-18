@@ -1,5 +1,5 @@
 # git-dir
-git-dir is a bash script that you can use to run a git command on all of the git repos in a specified directory path.
+git-dir is a bash script that you can use to run a [git](https://git-scm.com) command on all of the git repos in a specified directory path.
 
 ## Installation
 
