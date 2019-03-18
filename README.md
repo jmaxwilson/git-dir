@@ -25,4 +25,4 @@ If the path is not a repo, `git-dir` will search all of the sub-directories in t
 
 ## Demo
 
-![Animated GIF of using git-dir to run git commands on multiple repositories at once](https://raw.githubusercontent.com/jmaxwilson/git-dir/master/git-dir.gif "Example of using git-dir to run a git command on multiple repositories at once.")
+![Animated GIF of using git-dir to run git commands on multiple repositories at once](https://raw.githubusercontent.com/jmaxwilson/git-dir/master/demo.gif "Example of using git-dir to run a git command on multiple repositories at once.")
