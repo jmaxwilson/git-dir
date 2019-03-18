@@ -17,8 +17,8 @@ If the path is not a repo, `git-dir` will search all of the sub-directories in t
 
 1. Copy the `git-dir` script into a directory in your execution path:
 
-    `sudo cp git-dir.sh /usr/local/bin`
+    `sudo cp git-dir /usr/local/bin`
 
 2. Make sure that it is executable:
 
-    `chmod 744 /usr/local/bin/git-dir.sh`
+    `sudo chmod 755 /usr/local/bin/git-dir`
