@@ -11,7 +11,7 @@ Make sure that it is executable:
 
     sudo chmod +x /usr/local/bin/git-dir
 
-Add support for git command tab completion with `git-dir`:
+Add support for git command tab completion for `git-dir`:
 
     echo "_xfunc git __git_complete git-dir __git_main" >> ~/.bash_completion
 
