@@ -11,14 +11,14 @@ else
         if [ -d .git ]; then # If the current directory is a git repo then run the git command here
                 git $GIT_ARGS
         else # If the current directory is not a repo, search for subdirs for repos
-                REPO_COUNT=$(ls -R --directory --color=never */.git 2>/dev/null | wc -l)
+                REPO_COUNT=$(ls -R -d */.git 2>/dev/null | wc -l)
                 if [ $REPO_COUNT -gt 0 ]; then # If we found repos
                         printf "Found $REPO_COUNT repositories:\n\n" # List the repos
-                        ls -R --directory --color=never */.git 2>/dev/null | sed 's/\/.git//' && echo ""
+                        ls -R -d */.git 2>/dev/null | sed 's/\/.git//' && echo ""
                         read -r -p "Run git $GIT_ARGS on these repos? [Y/n] " CONFIRM #prompt for confirmation
                         if [[ $CONFIRM =~ ^[Yy]$ || $CONFIRM == "" ]]; then # if Y, y, or [Enter] run git command on each repo
                                 printf "\n"
-                                ls -R --directory --color=never */.git 2>/dev/null | sed 's/\/.git//' | xargs -P10 -I{} git -C {} $GIT_ARGS 
+                                ls -R -d */.git 2>/dev/null | sed 's/\/.git//' | xargs -P10 -I{} git -C {} $GIT_ARGS 
                         fi
                 else
                         echo "No repositories found."
